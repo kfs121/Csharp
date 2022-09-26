@@ -15,17 +15,17 @@ namespace String
             a = 97,
             Z = 90
         }
-        
+
         static void Main(string[] args)
         {
             string inputString;
             while (true)
             {
-                
+
                 Console.Write("Input Sentence: ");
                 inputString = Console.ReadLine();
 
-                if(inputString == "Q")
+                if (inputString == "Q")
                 {
                     return;
                 }
@@ -41,14 +41,14 @@ namespace String
         {
             StringBuilder strBuilder = new StringBuilder(inputString.Length);
             strBuilder.Append(inputString);
-            if(inputString[0] >= (int)Ascii.a)
+            if (inputString[0] >= (int)Ascii.a)
             {
                 strBuilder[0] = (char)(strBuilder[0] - ASCII_INTERVAL);
             }
 
-            for(int i = 1; i < strBuilder.Length; i++)
+            for (int i = 1; i < strBuilder.Length; i++)
             {
-                if(strBuilder[i] >= (int)Ascii.A && strBuilder[i] <= (int)Ascii.Z)
+                if (strBuilder[i] >= (int)Ascii.A && strBuilder[i] <= (int)Ascii.Z)
                 {
                     strBuilder[i] = (char)(strBuilder[i] + ASCII_INTERVAL);
                 }
