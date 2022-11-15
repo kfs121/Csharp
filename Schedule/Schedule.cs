@@ -56,7 +56,7 @@ namespace Schedule
     
         public Schedule(DayOfWeek myDayOfWeek, DateTime myTime, String myMemo)
         {
-            this.MyDayOfWeek = myDayOfWeek;     //this 안써도 되지만 가시성이 더 좋아보여서..
+            this.MyDayOfWeek = myDayOfWeek;     //this 안써도 되지만 가시성이 더 
             this.MyTime = myTime;
             this.MyMemo = myMemo;
         }
