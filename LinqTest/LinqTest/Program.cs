@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace LinqTest2
+namespace LinqTest
 {
     class Program
     {
-
-        const string PATH = @".\Weapons2.csv";
+        
+        const string PATH = @".\weapons2.csv";
         static void Main(string[] args)
         {
             string[] csvLines = File.ReadAllLines(PATH);
             List<Weapon> weaponList = new List<Weapon>();
             int select;
-
+            
             for (int i = 1; i < csvLines.Length; i++)
             {
-                char[] seperators = { ',' };
+                char[] seperators = {','};
                 string[] columns = csvLines[i].Split(seperators, StringSplitOptions.RemoveEmptyEntries);
 
-                weaponList.Add(new Weapon(columns[0], (EType)Enum.Parse(typeof(EType), columns[1]),
+                weaponList.Add( new Weapon( columns[0], (EType)Enum.Parse(typeof(EType), columns[1]), 
                     columns[2], int.Parse(columns[3]), int.Parse(columns[4]), int.Parse(columns[5]),
                     float.Parse(columns[6])));
             }
@@ -37,7 +37,7 @@ namespace LinqTest2
 
                     case 2:
                         Console.Write(" 찾을 레벨 :");
-                        SearchList(int.Parse(Console.ReadLine()), weaponList);
+                        SearchList(int.Parse(Console.ReadLine()),weaponList);
                         break;
                     case 4:
                         return;
@@ -86,7 +86,7 @@ namespace LinqTest2
         static void PrintWeapons(List<Weapon> weaponList)
         {
             Console.WriteLine($"  {"ID",-6}{"Name",-11}{"Level",-6}{"Power"}");
-            foreach (Weapon weapon in weaponList)
+            foreach(Weapon weapon in weaponList)
             {
                 Console.WriteLine($"  {weapon.Id,-6}{weapon.Name,-11}{weapon.Level,-6}{weapon.Power}");
             }

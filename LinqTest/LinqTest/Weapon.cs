@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LinqTest2
+namespace LinqTest
 {
     enum EType
     {

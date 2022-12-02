@@ -1,0 +1,8 @@
+id,type,name,level,power,piece,ratio
+S3001,Sword,무적의검,3,9,5,0.1
+S2001,Sword,중간검1,2,5,3,0.4
+S2002,Sword,중간검2,2,4,3,0.5
+S1001,Sword,약한검1,1,1,0,1
+S1002,Sword,약한검2,1,1,0,1
+S1003,Sword,약한검3,1,1,0,1
+S1004,Sword,약한검4,1,1,0,1
